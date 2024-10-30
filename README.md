@@ -1,50 +1,28 @@
-# React + TypeScript + Vite
+# React Graph Visualizer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**React Graph Visualizer** is an interactive web application designed to help users understand and visualize graph theory and algorithms. Through an intuitive, user-friendly interface, users can create various types of graphs and run algorithms such as Depth-First Search (DFS), Breadth-First Search (BFS), and Dijkstra's shortest path.
 
-Currently, two official plugins are available:
+Visit the application here: [React Graph Visualizer](https://chukyfredj.github.io/react-graph-visualizer/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Graph Types**: Supports undirected, directed, and weighted graphs.
+- **Node and Edge Interactions**: Add, connect, and delete nodes, and set weights on edges.
+- **Algorithm Visualization**:
+  - Depth-First Search (DFS)
+  - Breadth-First Search (BFS)
+  - Dijkstra's shortest path
+- **Multi-Language Support**: English and French interfaces.
+- **Real-Time Animations**: Visualize the traversal process with states: unvisited, visiting, and visited.
+- **Color-Coded Legend**: Clear, color-coded feedback for node and edge states.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## How It Works
 
-- Configure the top-level `parserOptions` property like this:
+1. **Add Nodes and Edges**: Click on the canvas to add nodes, and click between two nodes to connect them with an edge.
+2. **Select Graph Type**: Choose between undirected, directed, or weighted graphs.
+3. **Pick an Algorithm**: Select an algorithm and a start node, then click "Run Algorithm" to watch it in action.
+4. **Visual Feedback**: Each algorithm will update node and edge colors to represent different states, helping users understand the algorithm's behavior.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Languages
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Switch between English and French using the language selector to display instructions and labels in your preferred language.
